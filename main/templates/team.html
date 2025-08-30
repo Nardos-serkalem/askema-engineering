@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Team - Askema{% endblock %}
+
+{% block content %}
+<section class="team-section">
+  <h1 class="section-title">Our Executive Team</h1>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Behailu Seboka">
+      <h3>Behailu Seboka</h3>
+      <p>Chief Executive Officer</p>
+      <p class="bio">Leading Askema with a vision for sustainable automotive solutions.</p>
+    </div>
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Betelhem">
+      <h3>Betelhem</h3>
+      <p>Chief Technology Officer</p>
+      <p class="bio">Driving innovation in automotive and space weather forecasting technologies.</p>
+    </div>
+    <div class="team-member">
+      <img src="{{ url_for('static', filename='images/nadi.jpg') }}" alt="Nardos Serkalem">
+      <h3>Nardos Serkalem</h3>
+      <p>System Admin</p>
+      <p class="bio">Managing IT infrastructure and ensuring seamless system operations.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.team-section { text-align: center; padding: 60px 20px; }
+.team-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
+.team-member { max-width: 250px; text-align: center; }
+.team-member img { width: 100%; border-radius: 12px; }
+.team-member h3 { margin-top: 15px; font-size: 1.25rem; }
+.team-member p { margin: 5px 0; color: #555; }
+.team-member .bio { font-size: 0.9rem; color: #777; }
+</style>
+{% endblock %}

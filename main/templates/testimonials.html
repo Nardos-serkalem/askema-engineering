@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Testimonials - Askema{% endblock %}
+
+{% block content %}
+<section class="testimonial-section">
+  <h1 class="section-title">What Our Clients Say</h1>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <img src="{{ url_for('static', filename='images/client1.jpg') }}" alt="Helena T." class="testimonial-photo">
+      <p class="quote">“Askema helped us achieve next-level performance with their brake systems. Truly world-class service!”</p>
+      <p class="author">– Helena T., Logistics Director</p>
+    </div>
+    <div class="testimonial">
+      <img src="{{ url_for('static', filename='images/client2.jpg') }}" alt="Markos A." class="testimonial-photo">
+      <p class="quote">“Reliable, sustainable, and highly professional. We trust Askema Engineering for all our industrial needs.”</p>
+      <p class="author">– Markos A., Fleet Manager</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.testimonial-section { text-align: center; padding: 60px 20px; }
+.testimonials-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
+.testimonial { max-width: 300px; text-align: center; background: #f9f9f9; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.testimonial-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
+.quote { font-style: italic; color: #333; }
+.author { font-weight: bold; margin-top: 10px; color: #555; }
+</style>
+{% endblock %}

@@ -12,11 +12,11 @@ def about(request):
 
 def awards(request):
     awards = Award.objects.all()
-    return render(request, "awards.html", {"awards": awards})
+    return render(request, "awards.html", {"awards": awards_list})
 
 def news(request):
-    news = News.objects.all()
-    return render(request, "news.html", {"news": news})
+    news_list = News.objects.all()
+    return render(request, "news.html", {"news": news_list})
 
 def contact(request):
     return render(request, "contact.html")
@@ -27,3 +27,21 @@ def login_view(request):
 def signup(request):
     return render(request, "signup.html")
 
+def services(request):
+    return render(request, "services.html")
+
+def team(request):
+    return render(request, "team.html")
+
+def testimonials(request):
+    testimonials_list = Testimonial.objects.all()
+    return render(request, "testimonials.html", {"testimonials": testimonials_list})
+
+def discover(request):
+    return render(request, "discover.html")
+
+def partnership(request):
+    return render(request, "partnership.html")
+
+def overview(request):
+    return render(request, "overview.html")
