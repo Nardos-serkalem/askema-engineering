@@ -1,0 +1,116 @@
+{% load static %}
+{% extends "base.html" %}
+
+{% block title %}Home - Askema{% endblock %}
+
+{% block head %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>CAR & AUTO REPAIR SERVICES</h1>
+    <p>Reliable. Professional. Sustainable.</p>
+  </div>
+</section>
+
+<section class="service-cards">
+  <div class="card">
+    <h3>MECHANICS</h3>
+    <p>Brake, clutch & engine diagnostics</p>
+  </div>
+  <div class="card">
+    <h3>CAR ACCESSORIES</h3>
+    <p>Custom parts for performance & comfort</p>
+  </div>
+  <div class="card">
+    <h3>BREAKDOWN SERVICES</h3>
+    <p>24/7 roadside emergency support</p>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="visit-text">
+    <h2>COME AND VISIT US</h2>
+    <p>Located in Addis Ababa. Open Mon–Sat. Schedule your visit today!</p>
+  </div>
+  <div class="visit-img">
+    <img src="{% static 'images/garage.jpg' %}" alt="Visit Garage">
+  </div>
+</section>
+
+<section class="about">
+  <h2>ABOUT ASKEMA</h2>
+  <p>
+    Askema is your trusted partner in automotive repair and accessories.
+    We pride ourselves on our experienced mechanics and commitment to
+    sustainability through eco-friendly parts.
+  </p>
+</section>
+
+<section class="why-choose">
+  <h2>WHY CHOOSE US</h2>
+  <ul>
+    <li>Expert Mechanics</li>
+    <li>Eco-Friendly Solutions</li>
+    <li>Affordable Prices</li>
+    <li>Customer Satisfaction</li>
+  </ul>
+</section>
+
+<section class="testimonials-home">
+  <div class="testimonial-card">
+    <img src="{% static 'images/client1.jpg' %}" alt="Client 1">
+    <p>"They are Super fast!"</p>
+    <strong>- Daniel abebe</strong>
+  </div>
+  <div class="testimonial-card">
+    <img src="{% static 'images/client2.jpg' %}" alt="Client 2">
+    <p>"Loved the system they installed. Smooth and clean!"</p>
+    <strong>- Yonas Nigusse</strong>
+  </div>
+  <div class="testimonial-card">
+    <img src="{% static 'images/client3.jpg' %}" alt="Client 3">
+    <p>"Excellent service and very professional staff."</p>
+    <strong>- Betelhem Solomon</strong>
+  </div>
+</section>
+
+<section class="awards-section">
+  <h1 class="section-title">Our Achievements</h1>
+  <div class="awards-grid">
+    <div class="award-item">
+      <img src="{% static 'images/award1.jpg' %}" alt="Innovation Award 2024">
+      <p>Innovation Award – 2024</p>
+    </div>
+    <div class="award-item">
+      <img src="{% static 'images/award2.jpg' %}" alt="GreenTech 2023">
+      <p>GreenTech Pioneer – 2023</p>
+    </div>
+    <div class="award-item">
+      <img src="{% static 'images/award3.jpg' %}" alt="Engineering Excellence">
+      <p>Engineering Excellence – 2022</p>
+    </div>
+  </div>
+</section>
+
+<section id="partnership" class="partnership">
+  <h2>OUR VALUED PARTNERS</h2>
+  <div class="partner-logos">
+    <div class="partner-logo">
+      <img src="{% static 'images/logo.png' %}" alt="Partner Logo 1">
+    </div>
+    <div class="partner-logo">
+      <img src="{% static 'images/logoo.png' %}" alt="Partner Logo 2">
+    </div>
+    <div class="partner-logo">
+      <img src="{% static 'images/bkg.png' %}" alt="Partner Logo 3">
+    </div>
+    <div class="partner-logo">
+      <img src="{% static 'images/belayab.jpg' %}" alt="Partner Logo 4">
+    </div>
+  </div>
+</section>
+{% endblock %}

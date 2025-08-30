@@ -1,0 +1,43 @@
+{% load static %}
+{% extends "base.html" %}
+
+{% block title %}Discover - Askema{% endblock %}
+
+{% block content %}
+<section class="discover-section">
+  <h1 class="section-title">Discover Askema</h1>
+  <p class="section-subtitle">
+    Explore our latest projects, innovations, and collaborations in automotive technology and space weather forecasting.
+  </p>
+
+  <div class="discover-grid">
+    <!-- Card 1 -->
+    <div class="discover-project">
+      <img src="{% static 'images/solarguard_project.jpg' %}" alt="SolarGuard">
+      <h3>Project SolarGuard</h3>
+      <p>An advanced system for real-time solar storm prediction using machine learning models.</p>
+      <a href="#" class="btn-primary">Learn more →</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="discover-project">
+      <img src="{% static 'images/vehicle_research.jpg' %}" alt="Vehicle Research">
+      <h3>Autonomous Vehicle Research</h3>
+      <p>Exploring AI-driven navigation and safety systems for future vehicles.</p>
+      <a href="#" class="btn-primary">Learn more →</a>
+    </div>
+
+    <!-- Card 3 with Video -->
+    <div class="discover-project">
+      <img src="{% static 'images/community_partnerships.jpg' %}" alt="Community Partnerships">
+      <h3>Community & Partnerships</h3>
+      <p>Collaborating with industry leaders to bring the best innovations to market.</p>
+      <video controls style="width: 100%; border-radius: 8px; margin-top: 10px;">
+        <source src="{% static 'videos/partnerships_overview.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="#" class="btn-primary" style="margin-top: 15px;">Learn more →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

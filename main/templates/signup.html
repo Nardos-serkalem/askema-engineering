@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Sign Up - Askema{% endblock %}
+
+{% block content %}
+<section class="signup-section" style="padding: 60px 20px; max-width: 400px; margin: 0 auto; color: #eee; text-align: center;">
+  <!-- Logo with dark background for visibility -->
+  <div style="background-color: #1e1e1e; padding: 15px; border-radius: 10px; display: inline-block; margin-bottom: 30px;">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Askema Logo" style="width: 120px;">
+  </div>
+
+  <h1 style="font-size: 2.5rem; font-weight: 700; color: #e10600; margin-bottom: 30px;">Create Account</h1>
+  
+  <form method="POST" action="{{ url_for('auth.signup') }}" style="display: flex; flex-direction: column; gap: 20px;">
+    <input type="text" name="full_name" placeholder="Full Name" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <input type="email" name="email" placeholder="Email" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <input type="password" name="password" placeholder="Password" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <input type="text" name="vehicle_name" placeholder="Vehicle Name" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <input type="text" name="vehicle_model" placeholder="Vehicle Model" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    
+    <button type="submit" style="background: #e10600; color: #fff; padding: 15px; border: none; border-radius: 6px; font-weight: 700; cursor: pointer;">
+      Sign Up
+    </button>
+  </form>
+
+  <p style="margin-top: 20px; font-size: 0.95rem;">
+    Already have an account? <a href="{{ url_for('auth.login') }}" style="color: #e10600; font-weight: 700; text-decoration: none;">Log in</a>
+  </p>
+</section>
+{% endblock %}

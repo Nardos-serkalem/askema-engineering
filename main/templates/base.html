@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Askema{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/team.css' %}">
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+  <link rel="stylesheet" href="{% static 'css/testimonials.css' %}">
+  <link rel="stylesheet" href="{% static 'css/partnership.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <link rel="stylesheet" href="{% static 'css/discover.css' %}">
+  <link rel="stylesheet" href="{% static 'css/awards.css' %}">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="{% url 'home' %}">
+        <img src="{% static 'images/logo.png' %}" alt="Askema Logo">
+      </a>
+    </div>
+    <nav>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'home' %}#partnership">Partnership</a>
+      <a href="{% url 'testimonials' %}">Testimonials</a>
+      <a href="{% url 'team' %}">Team</a>
+      <a href="{% url 'news' %}">News</a>
+      <a href="{% url 'awards' %}">Awards</a>
+      <a href="{% url 'discover' %}">Discover</a>
+      <a href="{% url 'contact' %}">Contact</a>
+      <li><a href="{% url 'admin:index' %}">Admin Dashboard</a></li>
+    </nav>
+    <div class="auth-buttons">
+      <a href="{% url 'signup' %}" class="btn btn-outline">Sign Up</a>
+      <a href="{% url 'login' %}" class="btn btn-red">Login</a>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "footer.html" %}
+
+</body>
+</html>

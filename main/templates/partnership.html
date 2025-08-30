@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Partnership - Askema{% endblock %}
+
+{% block content %}
+<section class="partnership-section">
+  <h1 class="section-title">Our Trusted Partners</h1>
+  <p class="section-subtitle">
+    We proudly collaborate with leaders in innovation, sustainability, and manufacturing excellence.
+  </p>
+
+  <div class="partner-logos">
+    <div class="partner-logo">
+      <img src="{{ url_for('static', filename='images/partner1.png') }}" alt="Partner 1">
+    </div>
+    <div class="partner-logo">
+      <img src="{{ url_for('static', filename='images/partner2.png') }}" alt="Partner 2">
+    </div>
+    <div class="partner-logo">
+      <img src="{{ url_for('static', filename='images/partner3.png') }}" alt="Partner 3">
+    </div>
+  </div>
+</section>
+{% endblock %}

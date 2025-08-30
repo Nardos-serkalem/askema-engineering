@@ -1,0 +1,43 @@
+{% load static %}
+{% extends "base.html" %}
+
+{% block title %}News - Askema{% endblock %}
+
+{% block content %}
+<section class="news-section">
+  <h2>Latest News</h2>
+  <div class="news-grid">
+    
+    <div class="news-card">
+      <img src="{% static 'images/3.jpg' %}" alt="News 1">
+      <h3>AI Diagnostic Tool Launch</h3>
+      <p>Our AI vehicle diagnostic system is now live, offering real-time fault detection and repair recommendations.</p>
+    </div>
+
+    <div class="news-card">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'videos/news_tech_demo.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Technology in Motion</h3>
+      <p>A behind-the-scenes look at our tech team's breakthroughs in smart roadside solutions.</p>
+    </div>
+
+    <div class="news-card">
+      <img src="{% static 'images/client1.jpg' %}" alt="News 3">
+      <h3>Sustainability Award</h3>
+      <p>Askema wins the 2025 Green Mobility Award for our eco-friendly brake system innovation.</p>
+    </div>
+
+    <div class="news-card">
+      <video autoplay muted loop playsinline>
+        <source src="{% static 'videos/news_ethio_partnership.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>ETHIOCAR Partnership</h3>
+      <p>Watch our new alliance with ETHIOCAR unfold as we expand our nationwide service coverage.</p>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

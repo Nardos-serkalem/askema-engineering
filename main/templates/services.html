@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Services - Askema{% endblock %}
+
+{% block content %}
+<section class="services-section">
+  <h1 class="section-title">Our Services</h1>
+  <p class="section-subtitle">
+    At Askema, we provide top-notch automotive solutions focused on safety, performance, and sustainability.
+  </p>
+
+  <div class="services-grid">
+    <div class="service-box">
+      <img src="{{ url_for('static', filename='images/service_brake.webp') }}" alt="Brake Systems">
+      <h3>Brake Systems</h3>
+      <p>High-performance and eco-friendly brake components designed for durability and safety.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="{{ url_for('static', filename='images/service_clutch.jpg') }}" alt="Clutch Diagnostics">
+      <h3>Clutch Diagnostics</h3>
+      <p>Precision testing and replacement for smooth clutch performance in all vehicle types.</p>
+    </div>
+
+    <div class="service-box">
+      <img src="{{ url_for('static', filename='images/service_custom.webp') }}" alt="Custom Solutions">
+      <h3>Custom Solutions</h3>
+      <p>Tailored systems for aviation, agriculture, and heavy industry applications.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

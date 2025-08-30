@@ -1,0 +1,27 @@
+{% load static %}
+{% extends "base.html" %}
+
+{% block title %}Login - Askema{% endblock %}
+
+{% block content %}
+<section class="login-section" style="padding: 60px 20px; max-width: 400px; margin: 0 auto; color: #eee; text-align: center;">
+  <h1 style="font-size: 2.5rem; font-weight: 700; color: #e10600; margin-bottom: 30px;">Login</h1>
+  
+  <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px; margin-bottom: 20px; object-fit: cover; max-height: 180px;">
+    <source src="{% static 'videos/login_illustration.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <form method="POST" action="{% url 'login' %}" style="display: flex; flex-direction: column; gap: 20px;">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Email" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <input type="password" name="password" placeholder="Password" required style="padding: 12px; border-radius: 6px; border: none; font-size: 1rem;">
+    <button type="submit" style="background: #e10600; color: #fff; padding: 15px; border: none; border-radius: 6px; font-weight: 700; cursor: pointer;">
+      Log In
+    </button>
+  </form>
+  <p style="margin-top: 20px; font-size: 0.95rem;">
+    Don't have an account? <a href="{% url 'signup' %}" style="color: #e10600; font-weight: 700; text-decoration: none;">Sign up</a>
+  </p>
+</section>
+{% endblock %}
