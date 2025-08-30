@@ -1,0 +1,24 @@
+{% load static %}
+{% extends "base.html" %}
+
+{% block title %}Awards - Askema{% endblock %}
+
+{% block content %}
+<section class="awards-section">
+  <h1 class="section-title">Our Achievements</h1>
+  <div class="awards-grid">
+    <div class="award-item">
+      <img src="{% static 'images/award1.jpg' %}" alt="Innovation Award 2024">
+      <p>Innovation Award – 2024</p>
+    </div>
+    <div class="award-item">
+      <img src="{% static 'images/award2.jpg' %}" alt="GreenTech 2023">
+      <p>GreenTech Pioneer – 2023</p>
+    </div>
+    <div class="award-item">
+      <img src="{% static 'images/award3.jpg' %}" alt="Engineering Excellence">
+      <p>Engineering Excellence – 2022</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
